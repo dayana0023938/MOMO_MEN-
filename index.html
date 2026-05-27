@@ -1,0 +1,3762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAYLOOM Restaurant</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background: linear-gradient(
+      135deg,
+      #ffd6ec,
+      #d8f3ff,
+      #fff2b8
+      );
+      min-height:100vh;
+      padding:30px;
+    }
+
+    /* ENCABEZADO */
+
+    .header{
+      width:100%;
+      background:rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
+      border-radius:30px;
+      padding:25px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+      margin-bottom:30px;
+    }
+
+    .logo-section{
+      display:flex;
+      align-items:center;
+      gap:20px;
+    }
+
+    /* AQUI PONES TU LOGO */
+    .logo{
+      width:140px;
+      height:140px;
+      border-radius:50%;
+      background:#fff;
+      border:6px solid #ff9ed2;
+      overflow:hidden;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .title h1{
+      font-family:'Pacifico', cursive;
+      font-size:55px;
+      color:#c74385;
+    }
+
+    .title p{
+      color:#6b6b6b;
+      font-size:18px;
+    }
+
+    .user-box{
+      background:white;
+      padding:20px;
+      border-radius:20px;
+      text-align:center;
+      min-width:220px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .user-box h3{
+      color:#c74385;
+      margin-bottom:10px;
+    }
+
+    /* MENU */
+
+    .menu-title{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .menu-title h2{
+      font-size:45px;
+      color:#b63b78;
+      letter-spacing:5px;
+    }
+
+    /* CATEGORIAS */
+
+    .categories{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  gap:20px;
+  margin-bottom:40px;
+}
+
+/* CARD */
+
+.card{
+  background:rgba(255,255,255,0.75);
+  border-radius:25px;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 8px 18px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* IMAGEN */
+
+.food-img{
+  width:130px;
+  height:130px;
+  margin:auto;
+  border-radius:50%;
+  overflow:hidden;
+  border:5px solid #ffcce6;
+  margin-bottom:15px;
+  background:#fff;
+}
+
+.food-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* TEXTO */
+
+.card h3{
+  font-size:15px;
+  color:#b63b78;
+  line-height:1.5;
+  font-weight:600;
+}
+
+    .card p{
+      color:#555;
+      font-size:15px;
+      line-height:1.6;
+    }
+
+    /* PRODUCTOS */
+
+    .products{
+      background:rgba(255,255,255,0.75);
+      border-radius:30px;
+      padding:30px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .products h2{
+      text-align:center;
+      color:#b63b78;
+      margin-bottom:25px;
+      font-size:38px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    th{
+      background:#ff9ed2;
+      color:white;
+      padding:15px;
+      font-size:16px;
+    }
+
+    td{
+      padding:12px;
+      text-align:center;
+      background:rgba(255,255,255,0.7);
+      border-bottom:1px solid #eee;
+    }
+
+    tr:hover{
+      background:#ffe6f3;
+    }
+
+    /* FOOTER */
+
+    footer{
+      margin-top:30px;
+      background:#c74385;
+      color:white;
+      padding:18px;
+      border-radius:20px;
+      text-align:center;
+      font-size:15px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+
+  <div class="header">
+
+    <div class="logo-section">
+
+      <!-- AQUI CAMBIAS TU LOGO -->
+      <div class="logo">
+        <img src="c:\Users\Dayana\Pictures\a484feee-de5b-49b4-86c7-d61e3ff4564f.png" alt="">
+      </div>
+
+      <div class="title">
+        <h1>Momo</h1>
+        <p>Sabores del mundo en un solo lugar</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- TITULO -->
+
+  <div class="menu-title">
+    <h2>MENÚ PRINCIPAL</h2>
+  </div>
+
+  <!-- CATEGORIAS -->
+
+<div class="categories">
+
+    <!-- PRODUCTO 1 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_UKqDD1oRG_Gg1eM_DlO78bsYhasgHx0wg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458921 - Mochi de arroz - Q18.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 2 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.hola.com/horizon/landscape/f73097d20458-hotteok-adobe-port.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458922 - Panqueque dulce coreano - Q20.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 3 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMxTN1RyNyT_iSorkU17yE6j21fU_wEFMZHg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458923 - Hielo raspado con frijol rojo - Q22.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 4 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdElQXY4TmS8vaaXPxJicifc6G50P_GVex3w&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458924 - Galleta de miel - Q15.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 5 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtBFhMWNe4A2pw8cUO6HSvKbqWK6d7jIR3VQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458925 - Dulce Dasik - Q17.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 6 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.minutoneuquen.com/u/fotografias/m/2025/4/5/f1280x720-794996_926671_5050.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458926 - Pastel de arroz con soya - Q19.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 7 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvd8WLAbxUf6M1jC0LG5Tl3gWL6qpqjwtX0w&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458927 - Pan en forma de pez - Q21.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 8 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop_new/public/srh_recipes/b299040468a82b7655efae398b9515e9.png?itok=PHvB_hUl" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458928 - Bolitas de arroz - Q16.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 9 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://carolinarice.com/wp-content/uploads/2019/07/Coconut-Rice-Pudding-Milkshake-Jasmine-Rice.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458929 - Bebida de arroz dulce - Q14.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 10 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.infocampo.com.ar/wp-content/uploads/2019/10/leche-de-banana2.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458930 - Leche de banana - Q13.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 11 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMuY4Z1OePqpVh2OTHqQmC2BMb1Asv5upqw&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458931 - Helado de matcha - Q15.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 12 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkZAjjXKTIm5m40lQfl53A9Yvr67vu30J-Xg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458932 - Helado de fresa - Q18.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 13 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxvucCtYFaqIMSq58RRvETF6__BGiNrrda0Q&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458933 - Pastelito de chocolate - Q20.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 14 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZEWK2koPmqP6Gs3xWmbNuBstns9Fh4KM-Yg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458934 - Tteok con miel - Q22.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 15 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiBrWrC2MSn2wNyq5hMEXf9DuPmzOHXtRIgg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458935 - Bizcocho coreano - Q17.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 16 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://i.ytimg.com/vi/uVU4FBZQTCY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB0dW32lOeASdlMQrTWh7BPMTC_VA" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458936 - Pan con frijol dulce - Q19.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 17 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.cocinadelirante.com/800x600/filters:format(webp):quality(75)/sites/default/files/images/2025/04/maritozzo-italiano.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458937 - Pan con crema - Q21.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 18 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://images.aws.nestle.recipes/resized/pan_con_chocolate__aceite_y_sal_principal_horizontal_8ff2_1290_742.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458938 - Pan de chocolate - Q23.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 19 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmATuRgpWrGB8mP7EnTFwTriMPhijYtOBuDg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458939 - Latte de fresa - Q16.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 20 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.nescafe.com/cl/sites/default/files/2023-09/recipehero-icedvanillalatte-1066x1066-64fa2660971cd.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458940 - Latte de vainilla - Q18.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 21 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKQsirWUkXSaCPZc7JUCYqf-D1qudsHfC4Yg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458941 - Latte de chocolate - Q20.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 22 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.finedininglovers.es/sites/default/files/article_content_images/te-helado-casero.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458942 - Té frío dulce - Q22.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 23 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-FmyS48nRK2Encc6S57_RfGYCBZecdPCPUg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458943 - Té de miel - Q17.00
+        </h3>
+
+    </div>
+
+        <!-- PRODUCTO 24 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAY01Fac1SAAPA5_1vb6pfl6kOXxrSwQvxYQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458944 - Mochi de fresa - Q19.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 25 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx0LwviGi3LD-uEWnosllba-uyL4u6OdfV2Q&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458945 - Mochi de chocolate - Q15.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 26 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSSYMbHREx9YCvk_2yfXQp3IMl_rU6PB4GFA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458946 - Bingsu de mango - Q14.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 27 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrIS58ASpT7F4BX6XGK05zCUFFEEvI7pFwuA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458947 - Bingsu de chocolate - Q16.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 28 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://i.pinimg.com/736x/1d/c8/57/1dc8571ba829ff310b6ccc93dc552a25.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458948 - Bingsu de fresa - Q18.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 29 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTafnACe2R1cEkxfZok5HtTHhWOjl_5Nc4LMA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458949 - Bingsu Oreo - Q13.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 30 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSX_9otkLM4yvUWxqBudeA_16tnovsym-gZQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458950 - Pan con miel - Q12.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 31 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://comedera.com/wp-content/uploads/sites/9/2022/03/pan-de-queso.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458951 - Pan dulce de queso - Q14.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 32 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTqK_45ApYdUfnUxzRyCPWeXPNG7KAT4k15A&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458952 - Yakgwa con nuez - Q16.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 33 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://kimchimari.com/wp-content/uploads/2018/11/Green-Tea-and-Omija-Tea-Cookies-Dasik-500x427.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458953 - Dasik de matcha - Q15.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 34 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd2bVxyNXjo6S7f1aPye5zxiOdo2ce3KTsxQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458954 - Tteok de chocolate - Q17.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 35 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://7diasdesabor.com/wp-content/uploads/2024/05/WEB-POSTRE-1.png" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458955 - Tteok de fresa - Q19.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 36 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd-GIzE1VtgMjQWxCzo5ARsVTM29ttILvQmA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458956 - Helado mixto - Q18.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 37 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://thumbs.dreamstime.com/b/mochi-surtido-y-colorido-en-una-caja-de-regalo-roja-con-fondo-flor-cerezo-430308083.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458957 - Mochi surtido - Q20.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 38 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPPLnCRH6gVWfHqHy8-dQL8gO7tIKcUSfPpQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458958 - Bingsu especial - Q22.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 39 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSten0rnDkdpQvdpg0GPqZ-sz0NZUzf8nS5AA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458959 - Pan dulce surtido - Q24.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 40 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaoIbe24LMfn5vvCMaFW6CWRyFHXS6jUXkHA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458960 - Té especial - Q25.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 41 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHBywAmIfSZDTtoF4ZZwcF5d0z0H-zS4wSIA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458961 - Postre coreano premium - Q27.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 42 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB32qrCC4gzonTMGeXpoX9jUO8QSj2dQsNQA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458962 - Bibimbap - Q45.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 43 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM5faElV8Y-lV5SpUuJom_XMvTIarA-Dkhkg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458963 - Kimbap - Q32.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 44 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQex-YOs_roIvN8z-WuSCpXSI36EayRpYGN2g&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458964 - Ramyeon coreano - Q28.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 45 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWCXyeqcyDatMWqIB_sz7e2-H_qxKjf0VAdA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458965 - Japchae - Q39.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 46 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqhNSKLNdz7Bc_AwAzGISev0kvnZB9zOKeOg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458966 - Bulgogi - Q52.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 47 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://i.ytimg.com/vi/eTucCw1w6Ak/maxresdefault.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458967 - Kimchi tradicional - Q24.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 48 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRzR5hDqT5lGqJCL_0l3JRnxiSgjcNzpHC5Q&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458968 - Corn dog coreano - Q30.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 49 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThycqZ_KNvTTITxy6VJ_CjwdfEWuhAee1yg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458969 - Mandu coreano - Q27.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 50 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA4laWuT9RltQ8vMgLf2hZaLrOEmKkh14_ug&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458970 - Kimchi Jjigae - Q41.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 51 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQynZzSRmxUq8UPuzxIRcXxaoerTLs-s4jErA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458971 - Samgyeopsal - Q58.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 52 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://s.yimg.com/ny/api/res/1.2/00GHEE_3WfZN_ntWOX5gBw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MDtjZj13ZWJw/https://media.zenfs.com/es/animal_gourmet_468/52457635c20b3b14c40783f570fbe3d1" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458972 - Tteokbokki picante - Q36.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 53 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://imag.bonviveur.com/jajangmyeon.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458973 - Jjajangmyeon - Q40.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 54 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_vaQ_ebUL_3QTNY4nW1hgAMa0pGRKjEM62g&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458974 - Hot dog coreano - Q29.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 55 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://thumbs.dreamstime.com/b/torta-de-pescado-odeno-coreano-o-guk-eomuk-es-un-estilo-popular-comida-callejera-odeng-al-del-pa%C3%ADs-179423139.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458975 - Odeng coreano - Q26.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 56 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://tolvasaypaasa.es/wp-content/uploads/2022/07/receta-pollo-coreano.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458976 - Pollo Yangnyeom - Q47.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 57 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPG-GAgac7ro1zB0bJLUTSRDqJiXHZh1GwLw&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458977 - Soondubu Jjigae - Q44.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 58 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuXbIN3CkFcIPAZ9liNO2c_oZ624Ll-I-Slg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458978 - Arroz frito con kimchi - Q35.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 59 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl3qkhtv4YgtulpcH9l09axey10ZULznN_YQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458979 - Pajeon - Q31.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 60 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://cdn7.kiwilimon.com/recetaimagen/10429/640x640/4225.jpg.webp" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458980 - Sopa de algas - Q23.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 61 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm1KkquICdVnXJ91qumMpG1yFViJf8nYJxIw&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458981 - Dakgalbi - Q49.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 62 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ1c-ocWhthEtWsXoKNjT7qBfzbz8fvn1CSA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458982 - Galbi coreano - Q60.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 63 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxPCsgv_rcuGtV8GYsA-HucVqHQRt-8Je3TA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458983 - Pancake de kimchi - Q34.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 64 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcgWa9CYA9Qd0dopQFRVRZrTfEBaz4LuGqYQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458984 - Ramen de mariscos - Q46.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 65 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhpd8s2VqMPZyNRlmLf-xkJCysHB5KsKATug&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458985 - Arroz picante coreano - Q37.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 66 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaJN86ovG_0qX6cIthw9gNOOMrLSSqD8AY9w&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458986 - Fideos coreanos - Q33.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 67 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTcAVDP3n78QkLpAn8dOpsfDYmYptGDrrWWg&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458987 - Pollo frito coreano - Q55.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 68 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd6mbIfuttwMMGMBbFCcKEFmO9Jo4Elkqquw&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458988 - Sushi coreano - Q42.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 69 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Vg4p_dztrNwCTNw5tIEu_-Lu_bD2v4mmRQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458989 - Mandu frito - Q29.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 70 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW1mYW_HIeQ5dIeKBZfGIM7hLKRFLDcCfq6Q&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458990 - Bulgogi picante - Q57.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 71 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6AIuAin0ZadpM-GqTvybpoCZcorqVYi7JA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458991 - Arroz con huevo coreano - Q26.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 72 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEP7CFNOTwEL6w_h4Dcm23HmmsAlmKbjGDug&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458992 - Udon coreano - Q39.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 73 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAooyHoyreoDkFFVOEd7JPvrlJzFeF2MBfAg&s alt="">
+        </div>
+
+        <h3>
+        KR-FO-458993 - Carne marinada coreana - Q62.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 74 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1aj9XWvwNE_uaI5JxfMDgOOO82PouFS1x9w&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458994 - Sopa picante coreana - Q31.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 75 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQJYFGRdjOuEHPQSPLdBEv42z56VSp0EJgdw&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458995 - Pescado coreano - Q48.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 76 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkjAsdsVvy3R7YDRm8EXivUgwsl7wC6ZIpcA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458996 - Ramen de pollo - Q36.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 77 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://i.blogs.es/efbc4c/tofu-bulgogi-coreano/450_1000.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458997 - Tofu coreano - Q28.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 78 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKZK3VmpogB0CXq0QP6uiAZVjojxNZZpLCRQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458998 - Pollo con queso - Q53.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 79 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://content-cocina.lecturas.com/medio/2024/07/15/arroz-rojo-mexicano_6c665289_693824358_240715100923_1280x720.jpg" alt="">
+        </div>
+
+        <h3>
+        KR-FO-458999 - Arroz con mariscos - Q44.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 80 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiluM69rL2adOiFTWCh1OLVxNtxHkFgGw1UA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-459000 - Katsu coreano - Q41.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 81 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVe6UNOp7xERIyo_kg4wTXAAiAJWAppdNwWQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-459001 - Pollo picante coreano - Q52.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 82 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2sPW0_3_i0VzrC0HcSmsEEUKKXG3MT3qcZQ&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-459002 - Sopa de tofu - Q34.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 83 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzx_cbPdl42lnrvNbIwJTr4CxDvu-0tAHcyA&s" alt="">
+        </div>
+
+        <h3>
+        KR-FO-459003 - Arroz con kimchi - Q38.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 84 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://img-global.cpcdn.com/recipes/89a85ed6abb7858b/1200x630cq80/photo.jpg" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772145 - Croissant francés - Q28.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 85 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://7diasdesabor.com/wp-content/uploads/2021/09/1076ec05afc254c49ebadf71819f0b00122.jpg" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772146 - Crepa de fresa - Q32.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 86 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4hGqwD7FUVT-GuobxSX2EWOFy8Qp3Vt_5Xw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772147 - Crepa de chocolate - Q35.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 87 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpj35axD31ripKwFwYZcUXG6XPaVz-26kNyw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772148 - Macaron francés - Q18.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 88 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOEMincP3cmoKW_4QMicZLszxMbyBbPbF1tw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772149 - Pain au chocolat - Q26.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 89 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSWDBibraA8wQxX-BAfazToamgPkazb0ZhuA&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772150 - Éclair francés - Q24.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 90 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://pekis.net/sites/default/files/styles/social_share_1200/public/2025-02/Quiche%20Lorraine.jpg?itok=fiC7u2nL" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772151 - Quiche Lorraine - Q46.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 91 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ui6_pS1m3-KkGPM81B_UzTnzHZNGOGWyyg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772152 - Baguette francesa - Q20.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 92 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbt7_pM9CZxL57oWbcYR5_AEKMS4Gvi0nYQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772153 - Ratatouille - Q48.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 93 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg6DXaSrqX6xh057Taj8x7Adb0D8jvOxQQEA&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772154 - Sopa de cebolla - Q33.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 94 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwKTtaBEUJAEu-l-K_IrsZe1VBsJmXc8CI4g&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772155 - Tarta de manzana - Q27.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 95 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ37s19vxGPn9Cnq2GmaJ_PLm38vYy6qX1zw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772156 - Crème brûlée - Q29.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 96 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTod1nJcAwKG6BWdSpGAGmccz_Izh8D1S7Agw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772157 - Café latte francés - Q19.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 97 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvMXFTHAi9EQEulLKSDGKabwisF8FMF6FzJg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772158 - Mousse de chocolate - Q31.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 98 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI4tZUOMzbRNGCLmrR76dsGTGSyyWSxbtWFg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772159 - Ensalada francesa - Q36.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 99 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4Qwu-BrBOsz1t7UTowT6snpo8gq9B5QOf5g&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772160 - Pollo a la mostaza - Q55.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 100 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ETVyKCYz02hgyHZN9NbEKZ7pTBIhVUFh5g&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772161 - Filete francés - Q64.00
+        </h3>
+
+    </div>
+    
+    <!-- PRODUCTO 101 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://s1.elespanol.com/2021/12/26/cocinillas/recetas/637696244_218617723_1706x960.jpg" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772162 - Salmón francés - Q58.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 102 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/croque-monsieur-66a219aa5f0b2.jpg?crop=0.689xw:1.00xh;0.0817xw,0&resize=1200:*" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772163 - Croque Monsieur - Q42.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 103 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpqC_XsVumEw4CF_xAPKZnB_4Q2dPp1B_Lug&s alt="">
+        </div>
+
+        <h3>
+        FR-DS-772164 - Croque Madame - Q45.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 104 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://imagenes.elpais.com/resizer/v2/V4IAYKQGIBGWTEQV453KISECJA.jpg?auth=c9317a8f593ae0e96fcc1c15437794211baaa37b69daa507ed59fe18c1d27bf2&width=1960&height=1470&smart=true" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772165 - Pasta francesa cremosa - Q47.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 105 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkgbdvt0ObcbZSzrO7Y2HIufQqXv7OOK3yLw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772166 - Panini francés - Q39.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 106 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://images.aws.nestle.recipes/resized/2020_06_23T12_11_20_mrs_ImageRecipes_144309lrg_1080_850.jpg" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772167 - Lasaña francesa - Q52.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 107 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://editorialtelevisa.brightspotcdn.com/c1/63/7ab5833b477ebd11372c6c4e3381/como-hacer-papas-a-la-francesa-receta-facil-rapida.jpg" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772168 - Papas gratinadas - Q34.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 108 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNKMHRC5ugXPjgLquSa2VD7RGy_f0iX9Cp-Q&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772169 - Hamburguesa francesa - Q49.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 109 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgd-Sv_VYv0kcjNWPYvnZQFvpFalYrC26gag&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772170 - Pizza francesa gourmet - Q57.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 110 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.recetasnestle.com.co/sites/default/files/srh_recipes/14c5f883b508e3d7a65bb808e9af41bd.jpg" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772171 - Crepa de pollo - Q37.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 111 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm7jFEBlC1JoRUIQwaZ4KAX4BhDuznYB6e-A&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772172 - Crepa de queso - Q35.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 112 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://i.ytimg.com/vi/dqk2NaLYVEI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBXPSy2Jakq_ItydCZxgqRKj-plXA" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772173 - Pollo cremoso francés - Q56.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 113 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAKGHFOjoF3W04DY4Qq9vqdl8EJ31oxBznHg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772174 - Carne al vino - Q68.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 114 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyagn9jNklBsZWLLjivbkeONDjwM0OAlgHMQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772175 - Pastel francés premium - Q33.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 115 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGHzJPLcg2gUCd8JdpobBGeLxjwrxHtuDdg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772176 - Dona francesa - Q18.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 116 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.oetker.co.uk/assets/recipes/assets/db1d96d64afc444caff239b284cb3d23/1272x764/pastel-macarons-new.webp" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772177 - Macarons surtidos - Q26.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 117 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZnLIePmi5tEBy1zU57hjo-Vv9pDobsgL-vg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772178 - Waffle francés - Q29.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 118 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREXy9kj2NH4LtwLVLFOj3EILwG-pFRVsYNJA&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772179 - Helado francés - Q24.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 119 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqRUmwgjj9Xnw7TP8qj9Z5bgjazdu45EwyLw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772180 - Tarta de fresa - Q30.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 120 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROt1QM3upoSI3j61Vy6ijgepAlzzM4pI-vJQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772181 - Pastel de vainilla - Q28.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 121 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxQgtx2pnwC5PRQScE6HHY87PCg73sSAxbYQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772182 - Pan francés con miel - Q21.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 122 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRthHibwwgp_UhMa_vRD7wwtSm9oFsYBTLnbg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772183 - Café caramelo francés - Q23.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 123 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtLjwNORYsjhw6f8w5X1ElbHE86kfhnDZCIQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772184 - Crepa de banano - Q31.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 124 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvRliu1Wc2dWc2MDHjQ-ihKcGOWlirk7JwQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772185 - Croissant con queso - Q27.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 125 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx-lq7aek7xRNCvDCjr3-rID5mKjVqmrAYvA&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772186 - Croissant con jamón - Q29.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 126 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGL1Vpnc5DZvNyK9MiIOjc7fF_T7uVqKEZcQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772187 - Brownie francés - Q22.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 127 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQVqI16qFvlHZLVezbHzdHcrHwrrB9na6gOg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772188 - Pastel de limón - Q26.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 128 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9drIkrG83Pxq7c2efGDdUIni6sqbgJ_xOnA&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772189 - Muffin francés - Q19.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 129 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFDRJyTLAlVPaXhsXlpGpCXYbHQUbw4844w&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772190 - Tarta de chocolate - Q34.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 130 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRF6ZHhiveOcnJentQLkmfzZ7k7JraqmaniQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772191 - Crepa Oreo - Q33.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 131 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ6zbGG4YArKzhzcZ-ORQaTDmt1uYejxKFPg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772192 - Mousse de fresa - Q25.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 132 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsHTIJaNtBKXGnhPOivWSbzWks1ZyzmlkJLw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772193 - Pizza cuatro quesos - Q59.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 133 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcYz6FQUI1FRmdzfRNJqZWTYj4GUCaEsHzrQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772194 - Pasta con pollo - Q46.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 134 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnInMHN7JM-vbrQPV6BqzknniixpSRSQfvow&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772195 - Sopa cremosa francesa - Q32.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 135 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiDaBk5x-bsrhx46LUnkUL3EujPgfjD16ZPQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772196 - Pollo con hierbas - Q54.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 136 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHsM8sxidi1pj2yRl9RzsrW86WYDad7E31xg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772197 - Carne francesa premium - Q69.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 137 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqCJcAgZQY-3jobBjSI5X9uwu6uqf3T8RIbw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772198 - Ensalada con queso - Q38.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 138 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-YvYPcQF1XqSz5bIDFlQKzAHEsCaitZOE1Q&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772199 - Waffle de fresa - Q27.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 139 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.everydayeileen.com/wp-content/uploads/2025/02/chocolate-waffle-recipe.jpg" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772200 - Waffle de chocolate - Q29.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 140 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKqkLD18Kahu8DcN9uGT8GjQypLOkwe7oOYg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772201 - Crepa Nutella - Q35.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 141 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlnbeIGn1s_u5qaigsuZ7OjYFRo6YsMG9pqA&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772202 - Pan de frambuesa - Q24.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 142 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.cursosbaristacafe.com.mx/storage/2013/12/que-es-el-cafe-de-vainilla.png" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772203 - Café vainilla francés - Q22.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 143 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://i.ytimg.com/vi/BZoL94dbxv8/sddefault.jpg" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772204 - Crepa dulce francesa - Q30.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 144 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAsIVzp7UL1XSkYjvDo9dyRsDLKQ6Gawwgvg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772205 - Macaron de fresa - Q20.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 145 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTV29zjl41nK2UdDXtgK13sCPNA5na7EeQBA&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772206 - Macaron de chocolate - Q20.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 146 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_IYgD0StJV54tf-oni5OaYpd3ZibNtkiG-A&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772207 - Pastel de caramelo - Q28.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 147 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQklmue_nu63WfY1cs3wldC72bVdK9xOhbxBg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772208 - Tarta francesa premium - Q36.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 148 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRGRLO7jx99VrYf6xCtmhAJks-Sb4ih_Dceg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772209 - Croissant doble queso - Q31.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 149 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI2hdQeNVlyu20ReOpJcNwdgW0ER5hwxnauQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772210 - Pizza francesa de trufa - Q63.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 150 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://images.getrecipekit.com/20240313052605-receta-de-carne-en-sart-c3-a9n-inox.jpg?aspect_ratio=16:9&quality=90&" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772211 - Filete cremoso francés - Q72.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 151 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROOWVulj5Ko4Enoq0x5ePekn6lz-BGAOCZ4Q&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772212 - Salmón con crema - Q61.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 152 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKLHYCrdzP1WKZf3C7I_8E0a9ZPq9NIDlzbw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772213 - Pasta de mariscos - Q58.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 153 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBK_2KVa4E2U7pH8doqYZtA8pCUuFOPbCFxg&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772214 - Pollo al vino francés - Q57.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 154 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRCtNGxrw_i2YyjkVcItLDpHtOl_EgOTS6ew&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772215 - Lasaña de queso - Q49.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 155 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://thumbs.dreamstime.com/b/fre%C3%ADr-las-hamburguesas-encima-de-una-estufa-93695336.jpg" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772216 - Hamburguesa de trufa - Q54.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 156 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZUFg-f3t_trNkXhy5TBZyDm1vdLMPxt-NKQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772217 - Carne con mantequilla - Q74.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 157 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYR4QB6bqXLoO4f6VT2501c6JDBhfhcOwPAQ&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772218 - Ensalada premium francesa - Q40.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 158 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsgzG8QVn7SVe8V2i3rWC5gWGpffTqGY6Sw&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772219 - Café moka francés - Q24.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 159 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSn53otiSeb4vojCrW4TYQzd76KIhTuZHCHA&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772220 - Pastel premium francés - Q37.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 160 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSizi-AAe03fns-JNtm2C6uqHffLL7c1mJs0g&s" alt="">
+        </div>
+
+        <h3>
+        FR-DS-772221 - Crepa premium francesa - Q39.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 161 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcVBrZKpbuDRQ5gf_sDG9dJlgpiTP_-qvGxQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991245 - Shawarma de pollo - Q42.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 162 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTXYcRwBrWuxHTnheEjCYK2e2_0mQoKSyAYQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991246 - Shawarma de carne - Q45.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 163 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0jh-jjHaTPoS83RB51YjjmlCA-VooTZpS9g&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991247 - Falafel árabe - Q30.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 164 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgU9j4GLqIwKuWhUs68OJ7HXQ52wdAdlxI6Q&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991248 - Hummus tradicional - Q24.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 165 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmpHKlQs9ZOQqvfwve7uaE_t9yg-X9OSGjVQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991249 - Kebab árabe - Q48.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 166 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSEyg07FxPX9rKpIpCxr2_CNB7gebEJqUfUA&s alt="">
+        </div>
+
+        <h3>
+        AR-BV-991250 - Tabbouleh fresco - Q27.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 167 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqcXBktNsIimO0afpqZTFfKzsZaqzk-5FHsQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991251 - Baklava dulce - Q22.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 168 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://cdn.shopify.com/s/files/1/0191/9978/files/pan-de-pita-pan-naan.jpg?v=1708240342" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991252 - Pan pita árabe - Q18.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 169 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://i.blogs.es/452275/arroz-arabe-peruano/450_1000.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991253 - Arroz árabe especial - Q36.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 170 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtFfreOkbnQTNTT7j3QXVtbdXLbca5aajEBw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991254 - Cordero árabe - Q67.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 171 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrLiT-SJU1PjxzI1O5-CKvbPkMNHKQwihwPw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991255 - Ensalada Fatoush - Q29.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 172 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyePyB4coifjpNGn5ncGrX2nG_fgyZCcV5vA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991256 - Pollo árabe especiado - Q53.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 173 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6ylKloNmEMPS3Q23ccF8zZbs86MnRBZKVmA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991257 - Kafta árabe - Q46.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 174 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX0o8p0SkqNVtQfIZUtXJ9WG91JJ12lPxAQg&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991258 - Labneh cremoso - Q26.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 175 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVQx1mt6PvUT9Y6WcfG4jNSraoJhWebtwR5g&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991259 - Sambousek relleno - Q31.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 176 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVxkzRo8lClJZURHbeiMw05eF2lgGwi9XfbQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991260 - Manakish árabe - Q35.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 177 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5syGd08-gEim6VXtun-lACgTqdLWLeNxvoQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991261 - Té árabe de menta - Q16.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 178 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://cdn.shopify.com/s/files/1/0022/1393/7252/articles/Arabic_Coffee_2048x2048_crop_center.webp?v=1732611085" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991262 - Café árabe tradicional - Q20.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 179 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://i.blogs.es/86a90a/tarta-manzana-datil/450_1000.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991263 - Postre de dátiles - Q23.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 180 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQpvbjWODnMEo7XbJI7FNEDjsqtnBDneLDTA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991264 - Helado de pistacho - Q28.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 181 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.munatycooking.com/wp-content/uploads/2023/12/chicken-shawarma-image-feature-2023.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991265 - Shawarma mixto - Q49.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 182 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTluC7Y1U9sffbgUmP5At9QgvVVVWd2W98iTw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991266 - Falafel picante - Q32.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 183 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp1FANtjMdsi70smAgGy-0cz59VEnp5jP8sQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991267 - Hummus con aceitunas - Q26.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 184 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKcNvic3lEV1_LtUes2wyFysVdoPcdf2RD4Q&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991268 - Kebab de pollo - Q50.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 185 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9i-XbqXAxXIER-FJ1h5w0KVmMN4If7z5_Zw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991269 - Arroz con cordero - Q58.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 186 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1IaS73AE7E8eqhZKt-J0LpHVqOPBkDgF4Q&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991270 - Pan con zaatar - Q21.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 187 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUWvKQoDDY2o0ruyryP2wB7aia6InuTpfytA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991271 - Pollo con yogurt árabe - Q55.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 188 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWR_JJnoF2xxXJSGpUG999DIIMwxo22efO9A&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991272 - Ensalada de garbanzos - Q30.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 189 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVogL6gXRAhCK6IYIhrosMT5zF3K6e9t94aQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991273 - Postre árabe con miel - Q24.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 190 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.cocinadelirante.com/sites/default/files/images/2025/02/receta-de-agua-de-petalos-de-rosas.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991274 - Bebida árabe de rosas - Q19.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 191 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-mxJUEzVPIc20m0bI4RYz4HZWVTvguWGCxA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991275 - Kafta con queso - Q48.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 192 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQydtHmpOvF-h9WXDuHTrC_Auzdr-6_S_K9-g&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991276 - Labneh con hierbas - Q27.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 193 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCwBWX1hf9kReBNEgCypreVseqpm5O_pvZLA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991277 - Manakish con queso - Q38.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 194 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBoTjJJdu-R5jpODjGkqXXhCa3x5_9olCNSw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991278 - Sambousek de carne - Q34.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 195 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDKEbpRJSnSkB0BG53ndvdYsURa_Y7dplsw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991279 - Cordero con especias - Q70.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 196 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWIVw3blEQ93m0xic5P8Vwt0KgnQy10jDrIw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991280 - Pollo con arroz árabe - Q47.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 197 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnXXwsK9ewS02K8e-9V_1IR_4avrVTPhEcGQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991281 - Wrap de falafel - Q36.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 198 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ59uR-4FxKrtzQBmzLjGcLEbRrz8VRssDoZQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991282 - Hummus picante - Q25.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 199 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR73Lpi85RqmFrlvSgYtJOexUlaMCDwe15UPA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991283 - Postre de pistacho - Q26.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 200 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://especiasmontero.com/wp-content/uploads/2022/11/te-canela-1.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991284 - Té árabe con canela - Q18.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 201 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf-OA8ADGTU_9wQ07-AGwOAbqWhZxqeGl8EQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991285 - Shawarma especial - Q52.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 202 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://twicpics.moulinex.es/https://sebplatform.api.groupe-seb.com/statics/84ab9cb5-c374-452f-a6b2-b113fd1a602e.jpg?w=1920&fit=scale" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991286 - Kebab mixto - Q56.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 203 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxf1ZZq2Ut53Znbvfat2vLPRtgBcIQqArMTA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991287 - Arroz con frutos secos - Q44.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 204 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUkFho5WVvQy1OYVOvqRqQy6w0BdZeeDOX0A&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991288 - Pan pita con pollo - Q35.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 205 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmeqgnQdPLltheeG2WM8xAASt0s99czTTfVA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991289 - Falafel con ensalada - Q38.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 206 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://assets.elgourmet.com/wp-content/uploads/2024/05/E8A9357-1.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991290 - Labneh con aceitunas - Q29.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 207 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQolDIwb5sXT3sISXHoB6XXHFHUtJ2Ayikd0w&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991291 - Pollo en pan pita - Q43.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 208 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlFXuane9nJYsdEgRvyyEEl6R_73FzYK9lHw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991292 - Carne árabe premium - Q72.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 209 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF_tcgItihf75vl9IyMHkg8fx_UoAvUrpmcg&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991293 - Cordero con arroz - Q63.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 210 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTznjsU46L6yJBG4yNVUWMBLychXDtNvBqorA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991294 - Hummus de garbanzos - Q28.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 211 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.recetas-arabes.com/base/stock/Recipe/baklawa/baklawa_web.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991295 - Postre árabe de nuez - Q27.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 212 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.somoselcafe.com.ar/img/novedades/203.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991296 - Café con cardamomo - Q22.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 213 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPVMfTGZjULvdxmpSL-2F7Q3jdPSTU3iJ_tw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991297 - Sambousek de queso - Q33.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 214 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics_v2/medium/manakish.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991298 - Manakish de zaatar - Q37.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 215 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW8cIhKj8gsPGtaKyL1z8WkGFlbCmt7B9eiA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991299 - Falafel premium - Q40.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 216 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyePyB4coifjpNGn5ncGrX2nG_fgyZCcV5vA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991300 - Pollo árabe al limón - Q51.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 217 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://previews.123rf.com/images/yuliaff/yuliaff1505/yuliaff150500278/39713467-traditional-arabic-tea-and-dry-dates-selective-focus.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991301 - Té árabe de dátil - Q20.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 218 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://pekis.net/sites/default/files/styles/325x325/public/2025-02/Traditional%20Baklava_0.jpg?itok=N1wuUC4G" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991302 - Baklava de pistacho - Q30.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 219 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQREIZBYGeJKprFMf_y4g8rALOXCraSRoqUmQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991303 - Ensalada árabe fresca - Q31.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 220 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3CR5IioOZlk4YQCk9SZbnHyTogH-Fkqv7iw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991304 - Shawarma premium - Q58.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 221 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ4y0-b48k95xiLq9hs1iEKO0P2FbruZO8Aw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991305 - Cordero premium árabe - Q75.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 222 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyaUtsEEvumV7dOSw3BiYvBCvhKJPgk1wOfw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991306 - Kebab especial - Q60.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 223 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpeoPvfyOqJZJHC2aZ1355RDRLuR42LbYDw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991307 - Hummus premium - Q32.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 224 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNqlCqvQgjM75DJ-1QJuWRENZzoU6OfD3Spw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991308 - Falafel con queso - Q41.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 225 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6BfdeGIlPYNuwmAbjoVlqqEEnzfuVIJqerA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991309 - Arroz con pistacho - Q46.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 226 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://images.rappi.com/restaurants_background/coelpolloarabe-1673454570939.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991310 - Pollo premium árabe - Q57.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 227 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThbmM48Rwsu0ifSTQ0nRfmYVu5fV6qxAgL9g&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991311 - Pan pita con carne - Q39.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 228 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.cocinavital.mx/wp-content/uploads/2017/01/bolitas-banadas-con-miel.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991312 - Postre de miel y nuez - Q29.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 229 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXlx_r4hzyb3JRK1639MWikyREl5JQQ3UX0g&s alt="">
+        </div>
+
+        <h3>
+        AR-BV-991313 - Bebida de pistacho - Q24.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 230 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGV35gc7i-QzO0tXKIjDwv7NLngKFo12ZFWg&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991314 - Manakish premium - Q42.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 231 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHUBdSw3uWKPuSQh4vEcgX0ZgWvlsZ5upceA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991315 - Kafta premium - Q55.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 232 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOd48Kk21iGRBJSv31AMqjpoowCddH7oNrNA&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991316 - Labneh premium - Q33.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 233 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Re6INmz5I0j4-WC4kiKnwVGGJTHYNO9Uuw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991317 - Sambousek premium - Q38.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 234 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://braseriaelcarbon.com/wp-content/uploads/2024/10/braseriaelcarbon-1-1080x675.webp" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991318 - Carne árabe a la parrilla - Q78.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 235 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://kondimenta-store.com/cdn/shop/articles/Receta-Pollo-horno-especias-bbq_600x.jpg?v=1626781087" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991319 - Pollo con especias árabes - Q59.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 236 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.superhealthykids.com/wp-content/uploads/2014/07/veggie-wrap-featured-image-square-1.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991320 - Wrap premium de falafel - Q43.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 237 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.cocina-ecuatoriana.com/base/stock/Recipe/arroz-mixto-de-camarones/arroz-mixto-de-camarones_web.jpg.webp" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991321 - Arroz árabe mixto - Q48.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 238 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://cdn.nutritionstudies.org/wp-content/uploads/2021/04/Lebanese-Bean-Salad-web.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991322 - Ensalada premium árabe - Q34.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 239 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgI2I7jvFKTaGqok7uosm7-5jtzqdv30J-_g&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991323 - Postre de dátil y miel - Q31.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 240 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0qE6U9lyurdqu8YeV5ZS58TbQxKc61R6v3Q&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991324 - Café premium árabe - Q26.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 241 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://nutrient-matters.com/wp-content/uploads/2025/03/IMG_5274-580x1024.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991325 - Shawarma especial mixto - Q61.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 242 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7qrrV2AHV3UU4VPcBcLi05kYXwwUxdKebdg&s alt="">
+        </div>
+
+        <h3>
+        AR-BV-991326 - Kebab premium mixto - Q64.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 243 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD0dnPzfe2DITyExR2Vx8lIzWcUYYbTpTvbw&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991327 - Falafel especial árabe - Q44.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 244 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw0JVKSAthPx36TjdW9etmEJyUJ5cmvfDrUg&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991328 - Hummus especial premium - Q35.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 245 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4BDxKnl6sTt-DXLu-pkhHu2uIdDmK3fE2Ew&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991329 - Cordero árabe especial - Q82.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 246 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMqiQUGRCk6AyPp6lRocxJjFFZquKA2cs4w&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991330 - Pollo árabe premium - Q62.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 247 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://www.goya.com/wp-content/uploads/2023/10/arroz-con-dulce-coconut-rice-pudding.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991331 - Arroz árabe deluxe - Q52.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 248 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://madridmayrit.wordpress.com/wp-content/uploads/2013/09/img_7179.jpg" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991332 - Postre árabe deluxe - Q36.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 249 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://i0.wp.com/www.marjabacafe.com/wp-content/uploads/2020/07/hugo-cafe-arabe.jpg?fit=1024%2C1024&ssl=1" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991333 - Café árabe deluxe - Q28.00
+        </h3>
+
+    </div>
+
+    <!-- PRODUCTO 250 -->
+
+    <div class="card">
+
+        <div class="food-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0kItFfPaAB81GREeADIrwmvebOCzVVTPQTQ&s" alt="">
+        </div>
+
+        <h3>
+        AR-BV-991334 - Menú árabe especial - Q89.00
+        </h3>
+
+    </div>
+
+</div>
+ 
+
+  <!-- FOOTER -->
+
+  <footer>
+    Momo Restaurant © 2026 | Proyecto Final Contenidos Digitales
+  </footer>
+
+</body>
+</html>
